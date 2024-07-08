@@ -49,7 +49,7 @@ function Header() {
   );
   return (
     <>
-      <header className="w-full h-[15vh] flex justify-evenly fixed bg-[#111]">
+      <header className="w-full h-[12vh] z-50 flex justify-evenly fixed bg-[#111]">
         <nav ref={navRef} className="w-4/5 h-[10vh] mt-4 bg-[#111]  overflow-hidden border-b-[1px] border-[#ffffffad] ">
           <div className="w-full h-[9.5vh]  flex justify-between  text-white items-center  ">
             <div className="h-full w-[15%] flex justify-evenly items-center font-bold text-xl ">

@@ -11,6 +11,13 @@
     -webkit-backdrop-filter: blur( 0px );
     border-bottom: 1px solid rgba(255, 255, 255, 0.219);
 }
+.bji2{
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
 .triangle-down {
 	width: 100%;
 	border-left: 12vh solid #ffffff00;
@@ -22,5 +29,6 @@
     margin-left: -26vh;
 } */
 .b{
-    border: 1px solid #FFF;
+    border: 1px solid;
+    /* mix-blend-mode: difference; */
 }
