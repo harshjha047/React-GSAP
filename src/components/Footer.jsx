@@ -3,9 +3,10 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 
 function Footer() {
-  // const homoRef = useRef()
+  const homoRef = useRef()
   useEffect(() => {
     const element = document.querySelector(`#homo`);
+    const area = document.querySelector(`.area`);
 
     const handleMouseEnter = (dets) => {
       console.log(dets);
@@ -14,14 +15,26 @@ function Footer() {
         opacity: 1,
         scale: 1,
       });
+      
     };
+    const areaMouseEnter = (dets) => {
+      gsap.to('.homo',{
+        scale:5,
+      })
+    }
+    const areaMouseLeave = (dets) => {
+      gsap.to('.homo',{
+        scale:1,
+      })
+    }
 
     const handleMouseMove = (dets) => {
       const rect = element.getBoundingClientRect();
       gsap.to(`.homo`, {
-        x: dets.clientX - rect.x - 50,
-        y: dets.clientY - rect.y - 50,
-        // ease: "elastic.out(1.2,0.1)"
+        x: dets.clientX - rect.x - 5,
+        y: dets.clientY - rect.y - 5,
+        duration: 0.5,
+        ease: "expoScale(0.5,7,none)",
       });
     };
 
@@ -37,17 +50,21 @@ function Footer() {
     element.addEventListener("mouseenter", handleMouseEnter);
     element.addEventListener("mousemove", handleMouseMove);
     element.addEventListener("mouseleave", handleMouseLeave);
+    area.addEventListener("mouseleave", areaMouseLeave);
+    area.addEventListener("mouseenter", areaMouseEnter);
 
     return () => {
       element.removeEventListener("mouseenter", handleMouseEnter);
       element.removeEventListener("mousemove", handleMouseMove);
       element.removeEventListener("mouseleave", handleMouseLeave);
+      area.removeEventListener("mouseleave", areaMouseLeave);
+      area.removeEventListener("mouseenter", areaMouseEnter);
     };
   }, []);
 
   return (
     <div>
-      <div className="homo h-[100px] w-[100px] rounded-full bg-white opacity-0 scale-0 z-10 mix-blend-difference absolute"></div>
+      <div className="homo h-[20px] w-[20px] rounded-full bg-white opacity-0 scale-0 z-10 mix-blend-difference absolute"></div>
       <footer
         id="homo"
         className="h-[100vh] w-[100%] text-white cursor-none relative bg-[#111]  flex justify-center items-center"
@@ -56,7 +73,7 @@ function Footer() {
         <div className="w-[80vw] h-[100vh] flex flex-col ">
           <div className="w-full h-[50vh] flex ">
             <div className="text-[6vw] leading-[6.2vw] font-bold w-[55%] h-full big ">
-              <h1>
+              <h1 ref={homoRef} className="area ">
                 Have a project in mind? <br /> Contact Us!{" "}
               </h1>
             </div>

@@ -8,21 +8,37 @@ import Footer from './components/Footer'
 
 function App() {
   useGSAP(()=>{
-    // gsap.to(".down",{
-    //   y: 300,
-    //   duration:2,
-    //   delay: 1
-    // })
+    var tl = gsap.timeline()
+    tl.from("#page1", {
+        opacity: 0,
+        duration: 0.2,
+        delay: 0.2
+    })
+    tl.from("#page1", {
+        transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
+        borderRadius: "250px",
+        duration: 2,
+        ease: "expo.out"
+    })
+    tl.from("header", {
+      opacity: 0,
+      delay: -0.2
+  })
+  tl.from("#page1 h1, #page1 p, #page1 div", {
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.2
+})
   })
 
 
   return (
     <>
-    <div className="bg-[#111111] ">
+    
     <Header/>
     <Home/>
     <Footer/>
-    </div>
+   
      
     </>
   )

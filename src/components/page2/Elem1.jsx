@@ -11,7 +11,7 @@ function Elem1() {
   return (
     <>
     
-    <div className="h-[100vh] w-[100%] flex justify-evenly items-center">
+    <div className="h-[100vh] w-[100%] flex justify-evenly items-center bg-[#111]">
     <div className="h-[80vh] w-[80vw] flex ">
       <div className="h-[80vh] w-[40vw]  flex flex-col justify-between text-violet-50">
       <div className="">

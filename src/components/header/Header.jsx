@@ -42,6 +42,7 @@ function Header() {
           duration: 0.2,
           stagger: 0.3,
           delay: 0.3,
+          ease: "power1.out",
         });
       });
     },
@@ -52,8 +53,8 @@ function Header() {
       <header className="w-full h-[12vh] z-50 flex justify-evenly fixed bg-[#111]">
         <nav ref={navRef} className="w-4/5 h-[10vh] mt-4 bg-[#111]  overflow-hidden border-b-[1px] border-[#ffffffad] ">
           <div className="w-full h-[9.5vh]  flex justify-between  text-white items-center  ">
-            <div className="h-full w-[15%] flex justify-evenly items-center font-bold text-xl ">
-              <Link>LOGO</Link>
+            <div className="h-full w-[15%] flex  items-center font-bold text-xl ">
+              <Link>{'</DIV>'}</Link>
             </div>
             <ul className="flex justify-evenly h-full w-3/5 font-semibold text-sm uppercase  pt-[3vh] ">
               <div className="nav-elam font-semibold text-sm">
@@ -95,7 +96,7 @@ function Header() {
                 </h5>
               </div>
             </ul>
-            <div className="h-full w-[15%] flex justify-evenly items-center ">
+            <div className="h-full w-[15%] flex justify-end items-center ">
               <Link className="py-2 px-3 font-semibold bg-[#4D9D5B] h-[5vh] w-[20vh] text-xs rounded-full flex justify-evenly items-center">
                 CONTECT US
                 <img
