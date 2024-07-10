@@ -4,10 +4,4 @@ import Form from "./Form";
 import Post from "./Post";
 import Profile from "./Profile";
 
-export {
-    Card,
-    Home,
-    Form,
-    Post,
-    Profile,
-}
+export { Card, Home, Form, Post, Profile };

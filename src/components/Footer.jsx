@@ -3,7 +3,7 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 
 function Footer() {
-  const homoRef = useRef()
+  const homoRef = useRef();
   useEffect(() => {
     const element = document.querySelector(`#homo`);
     const area = document.querySelector(`.area`);
@@ -15,18 +15,17 @@ function Footer() {
         opacity: 1,
         scale: 1,
       });
-      
     };
     const areaMouseEnter = (dets) => {
-      gsap.to('.homo',{
-        scale:5,
-      })
-    }
+      gsap.to(".homo", {
+        scale: 5,
+      });
+    };
     const areaMouseLeave = (dets) => {
-      gsap.to('.homo',{
-        scale:1,
-      })
-    }
+      gsap.to(".homo", {
+        scale: 1,
+      });
+    };
 
     const handleMouseMove = (dets) => {
       const rect = element.getBoundingClientRect();
@@ -63,36 +62,36 @@ function Footer() {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <div className="homo h-[20px] w-[20px] rounded-full bg-white opacity-0 scale-0 z-10 mix-blend-difference absolute"></div>
       <footer
         id="homo"
-        className="h-[100vh] w-[100%] text-white cursor-none relative bg-[#111]  flex justify-center items-center"
+        className="h-[100vh] w-[100%] text-white cursor-none relative bg-[#111]  flex justify-center items-center "
       >
         <div className="h-[100vh] w-[100%] text-white mix-blend-difference z-20 absolute flex justify-center items-center">
-        <div className="w-[80vw] h-[100vh] flex flex-col ">
-          <div className="w-full h-[50vh] flex ">
-            <div className="text-[6vw] leading-[6.2vw] font-bold w-[55%] h-full big ">
-              <h1 ref={homoRef} className="area ">
-                Have a project in mind? <br /> Contact Us!{" "}
-              </h1>
-            </div>
-            <div className="w-[40%] h-full "></div>
-          </div>
-          <div className="w-full h-[50vh] flex ">
-            <div className=" w-[50%] h-full  ">
-              <div className=" flex pb-7 items-end h-full">
-                <ul className="font-semibold text-base ">
-                  <h4>Harsh</h4>
-                  <h4 className=" hover:text-green-600">Instagram</h4>
-                  <h4 className=" hover:text-yellow-600">Linked In</h4>
-                  <h4 className=" hover:text-[#E0F239]">GitHub</h4>
-                </ul>
+          <div className="w-[80vw] h-[100vh] flex flex-col ">
+            <div className="w-full h-[50vh] flex ">
+              <div className="text-[6vw] leading-[6.2vw] font-bold w-[55%] h-full big ">
+                <h1 ref={homoRef} className="area ">
+                  Have a project in mind? <br /> Contact Us!{" "}
+                </h1>
               </div>
+              <div className="w-[40%] h-full "></div>
             </div>
-            <div className="w-[50%] h-full "></div>
+            <div className="w-full h-[50vh] flex ">
+              <div className=" w-[50%] h-full  ">
+                <div className=" flex pb-7 items-end h-full">
+                  <ul className="font-semibold text-base ">
+                    <h4>Harsh</h4>
+                    <h4 className=" hover:text-green-600">Instagram</h4>
+                    <h4 className=" hover:text-yellow-600">Linked In</h4>
+                    <h4 className=" hover:text-[#E0F239]">GitHub</h4>
+                  </ul>
+                </div>
+              </div>
+              <div className="w-[50%] h-full "></div>
+            </div>
           </div>
-        </div>
         </div>
       </footer>
     </div>

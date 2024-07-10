@@ -3,7 +3,6 @@ import gsap from "gsap";
 
 function Page3() {
   const playRef = useRef();
-  
 
   useEffect(() => {
     const playButton = playRef.current;
@@ -19,33 +18,31 @@ function Page3() {
       gsap.to("#watch", {
         opacity: 0,
         y: 20,
-
         duration: 0.5,
       });
     };
-    const click =()=>{
-        video.play()
-        gsap.to(video,{
-            transform: "scaleX(1) scaleY(1)",
-            opacity: 1,
-            borderRadius: 0
-
-        })
-    }
-    const Click =()=>{
-        video.pause()
-        gsap.to(video,{
-            transform: "scaleX(0.75) scaleY(0)",
-            opacity: 0,
-            borderRadius: "50px"
-        })
-    }
+    const click = () => {
+      video.play();
+      gsap.to(video, {
+        transform: "scaleX(1) scaleY(1)",
+        opacity: 1,
+        borderRadius: 0,
+      });
+    };
+    const Click = () => {
+      video.pause();
+      gsap.to(video, {
+        transform: "scaleX(0.75) scaleY(0)",
+        opacity: 0,
+        borderRadius: "50px",
+      });
+    };
     playButton.addEventListener("mouseenter", mouseEnter);
     playButton.addEventListener("mouseleave", mouseLeave);
     playButton.addEventListener("click", click);
-    video.addEventListener('click', Click);
+    video.addEventListener("click", Click);
     return () => {
-      video.removeEventListener('click', Click);
+      video.removeEventListener("click", Click);
       playButton.removeEventListener("click", click);
       playButton.removeEventListener("mouseenter", mouseEnter);
       playButton.removeEventListener("mouseleave", mouseLeave);
@@ -55,7 +52,11 @@ function Page3() {
     <div>
       <div className="h-[100vh] w-full">
         <div className="h-full relative w-full ">
-            <video id="video" className="h-[100vh] z-50 object-cover absolute w-[100vw] scale-x-75 scale-y-0" src="https://videos.pexels.com/video-files/5585939/5585939-hd_1920_1080_25fps.mp4"></video>
+          <video
+            id="video"
+            className="h-[100vh] z-50 object-cover absolute w-[100vw] scale-x-75 scale-y-0"
+            src="https://videos.pexels.com/video-files/5585939/5585939-hd_1920_1080_25fps.mp4"
+          ></video>
           <div className="w-full h-full flex-col bg-[url('https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true')] bg-cover bg-center bg-no-repeat flex justify-center items-center">
             <div
               ref={playRef}

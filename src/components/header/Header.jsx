@@ -28,7 +28,7 @@ function Header() {
       // Mouse leave event to reset height
       navRef.current.addEventListener("mouseleave", () => {
         let tl = gsap.timeline();
-        tl.to("p", {
+        tl.to(".p", {
           y: 25,
           stagger: 0.05,
           opacity: 0,
@@ -51,53 +51,70 @@ function Header() {
   return (
     <>
       <header className="w-full h-[12vh] z-50 flex justify-evenly fixed bg-[#111]">
-        <nav ref={navRef} className="w-4/5 h-[10vh] mt-4 bg-[#111]  overflow-hidden border-b-[1px] border-[#ffffffad] ">
+        <nav
+          ref={navRef}
+          className="w-4/5 h-[10vh] mt-4 bg-[#111]  overflow-hidden border-b-[1px] border-[#ffffffad] "
+        >
           <div className="w-full h-[9.5vh]  flex justify-between  text-white items-center  ">
             <div className="h-full w-[15%] flex  items-center font-bold text-xl ">
-              <Link>{'</DIV>'}</Link>
+              <Link to={"/"}>{"</DIV>"}</Link>
             </div>
             <ul className="flex justify-evenly h-full w-3/5 font-semibold text-sm uppercase  pt-[3vh] ">
               <div className="nav-elam font-semibold text-sm">
-                <Link className="block">home</Link>
+                <Link to={"/"} className="block">
+                  home
+                </Link>
                 <h5 className=" hidden translate-y-7 overflow-hidden">
-                  <Link className="overflow-hidden">
-                    <p className="text-xs">home</p>
+                  <Link to={"/"} className="overflow-hidden">
+                    <p className="p text-xs">home</p>
                   </Link>
                 </h5>
               </div>
 
               <div className="nav-elam font-semibold text-sm">
-                <Link className="">login</Link>
+                <Link to={"/login"} className="">
+                  login
+                </Link>
                 <h5 className=" hidden translate-y-7 overflow-hidden">
-                <Link className="overflow-hidden flex flex-col">
+                  <Link to="/login" className="overflow-hidden flex flex-col">
                     {" "}
-                    <p className="text-xs">login</p>
+                    <p className="p text-xs">login</p>
                   </Link>
-                  <Link className="overflow-hidden flex flex-col">
+                  <Link
+                    to={"/signup"}
+                    className="overflow-hidden flex flex-col"
+                  >
                     {" "}
-                    <p className="text-xs">sign up</p>
+                    <p className="p text-xs">sign up</p>
                   </Link>
                 </h5>
               </div>
               <div className="nav-elam font-semibold text-sm">
-                <Link className="">About Us</Link>
+                <Link to={"/about"} className="">
+                  About Us
+                </Link>
                 <h5 className=" hidden translate-y-7 overflow-hidden">
-                  <Link className="overflow-hidden">
-                    <p className="text-xs">About Us</p>
+                  <Link to={"/about"} className="overflow-hidden">
+                    <p className="p text-xs">About Us</p>
                   </Link>
                 </h5>
               </div>
               <div className="nav-elam font-semibold text-sm">
-                <Link className="">help</Link>
+                <Link to={"/help"} className="">
+                  help
+                </Link>
                 <h5 className=" hidden translate-y-7 overflow-hidden">
-                  <Link className="overflow-hidden">
-                    <p className="text-xs">help</p>{" "}
+                  <Link to={"/help"} className="overflow-hidden">
+                    <p className="p text-xs">help</p>{" "}
                   </Link>
                 </h5>
               </div>
             </ul>
             <div className="h-full w-[15%] flex justify-end items-center ">
-              <Link className="py-2 px-3 font-semibold bg-[#4D9D5B] h-[5vh] w-[20vh] text-xs rounded-full flex justify-evenly items-center">
+              <Link
+                to={"/contect"}
+                className="py-2 px-3 font-semibold bg-[#4D9D5B] h-[5vh] w-[20vh] text-xs rounded-full flex justify-evenly items-center"
+              >
                 CONTECT US
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/7/76/Antu_application-vnd.oasis.opendocument.text-template.svg"
