@@ -116,49 +116,66 @@ function Page5() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-[20vh] border-b border-[#d3d3d371] flex justify-between py-[1vw]">
-              <div className="w-[20%] h-full text-xl">UX Audit</div>
-              <div className=" w-[60%] h-full text-xs">
+
+            <div className="w-full h-[20vh] border-b border-[#d3d3d371] overflow-hidden flex justify-between relative py-[1vw] page5-elements">
+              <div className="over"></div>
+              <div className="w-[20%] h-full text-xl z-10">UX Audit</div>
+              <div className=" w-[60%] h-full text-xs z-10">
                 Ahead of shaking up the market with a product relaunch or UI/UX
                 redesign, our researchers do UX auditing. It involves an
                 evaluation of the digital interface from UX, marketing, and
                 business standpoints, ultimately providing valuable
                 recommendations for improvement.
               </div>
-              <div className="w-[5%] h-full">a</div>
+              <div className="w-[5%] h-full">
+                {" "}
+                <div className=" rotate-[-45deg] z-10">{">"}</div>
+              </div>
             </div>
-            <div className="w-full h-[20vh] border-b border-[#d3d3d371] flex justify-between py-[1vw]">
-              <div className="w-[20%] h-full text-xl">UI Design</div>
-              <div className=" w-[60%] h-full text-xs">
+            <div className="w-full h-[20vh] border-b border-[#d3d3d371] overflow-hidden flex justify-between relative py-[1vw] page5-elements">
+              <div className="over"></div>
+              <div className="w-[20%] h-full text-xl z-10">UX Audit</div>
+              <div className=" w-[60%] h-full text-xs z-10">
                 Ahead of shaking up the market with a product relaunch or UI/UX
                 redesign, our researchers do UX auditing. It involves an
                 evaluation of the digital interface from UX, marketing, and
                 business standpoints, ultimately providing valuable
                 recommendations for improvement.
               </div>
-              <div className="w-[5%] h-full">a</div>
+              <div className="w-[5%] h-full">
+                {" "}
+                <div className=" rotate-[-45deg] z-10">{">"}</div>
+              </div>
             </div>
-            <div className="w-full h-[20vh] border-b border-[#d3d3d371] flex justify-between py-[1vw]">
-              <div className="w-[20%] h-full text-xl">UX Design</div>
-              <div className=" w-[60%] h-full text-xs">
+            <div className="w-full h-[20vh] border-b border-[#d3d3d371] overflow-hidden flex justify-between relative py-[1vw] page5-elements">
+              <div className="over"></div>
+              <div className="w-[20%] h-full text-xl z-10">UX Audit</div>
+              <div className=" w-[60%] h-full text-xs z-10">
                 Ahead of shaking up the market with a product relaunch or UI/UX
                 redesign, our researchers do UX auditing. It involves an
                 evaluation of the digital interface from UX, marketing, and
                 business standpoints, ultimately providing valuable
                 recommendations for improvement.
               </div>
-              <div className="w-[5%] h-full">a</div>
+              <div className="w-[5%] h-full">
+                {" "}
+                <div className=" rotate-[-45deg] z-10">{">"}</div>
+              </div>
             </div>
-            <div className="w-full h-[20vh] border-b border-[#d3d3d371] flex justify-between py-[1vw]">
-              <div className="w-[20%] h-full text-xl">UX Research</div>
-              <div className=" w-[60%] h-full text-xs">
+            <div className="w-full h-[20vh] border-b border-[#d3d3d371] overflow-hidden flex justify-between relative py-[1vw] page5-elements">
+              <div className="over"></div>
+              <div className="w-[20%] h-full text-xl z-10">UX Audit</div>
+              <div className=" w-[60%] h-full text-xs z-10">
                 Ahead of shaking up the market with a product relaunch or UI/UX
                 redesign, our researchers do UX auditing. It involves an
                 evaluation of the digital interface from UX, marketing, and
                 business standpoints, ultimately providing valuable
                 recommendations for improvement.
               </div>
-              <div className="w-[5%] h-full">a</div>
+              <div className="w-[5%] h-full">
+                {" "}
+                <div className=" rotate-[-45deg] z-10">{">"}</div>
+              </div>
             </div>
           </div>
           <div className="uiuxPanal2  h-[30vh] overflow-hidden ">
@@ -184,49 +201,65 @@ function Page5() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-[20vh] border-b border-[#d3d3d371] flex justify-between py-[1vw]">
-              <div className="w-[20%] h-full text-xl">UX Audit</div>
-              <div className=" w-[60%] h-full text-xs">
+            <div className="w-full h-[20vh] border-b border-[#d3d3d371] overflow-hidden flex justify-between relative py-[1vw] page5-elements">
+              <div className="over"></div>
+              <div className="w-[20%] h-full text-xl z-10">UX Audit</div>
+              <div className=" w-[60%] h-full text-xs z-10">
                 Ahead of shaking up the market with a product relaunch or UI/UX
                 redesign, our researchers do UX auditing. It involves an
                 evaluation of the digital interface from UX, marketing, and
                 business standpoints, ultimately providing valuable
                 recommendations for improvement.
               </div>
-              <div className="w-[5%] h-full">a</div>
+              <div className="w-[5%] h-full">
+                {" "}
+                <div className=" rotate-[-45deg] z-10">{">"}</div>
+              </div>
             </div>
-            <div className="w-full h-[20vh] border-b border-[#d3d3d371] flex justify-between py-[1vw]">
-              <div className="w-[20%] h-full text-xl">UI Design</div>
-              <div className=" w-[60%] h-full text-xs">
+            <div className="w-full h-[20vh] border-b border-[#d3d3d371] overflow-hidden flex justify-between relative py-[1vw] page5-elements">
+              <div className="over"></div>
+              <div className="w-[20%] h-full text-xl z-10">UX Audit</div>
+              <div className=" w-[60%] h-full text-xs z-10">
                 Ahead of shaking up the market with a product relaunch or UI/UX
                 redesign, our researchers do UX auditing. It involves an
                 evaluation of the digital interface from UX, marketing, and
                 business standpoints, ultimately providing valuable
                 recommendations for improvement.
               </div>
-              <div className="w-[5%] h-full">a</div>
+              <div className="w-[5%] h-full">
+                {" "}
+                <div className=" rotate-[-45deg] z-10">{">"}</div>
+              </div>
             </div>
-            <div className="w-full h-[20vh] border-b border-[#d3d3d371] flex justify-between py-[1vw]">
-              <div className="w-[20%] h-full text-xl">UX Design</div>
-              <div className=" w-[60%] h-full text-xs">
+            <div className="w-full h-[20vh] border-b border-[#d3d3d371] overflow-hidden flex justify-between relative py-[1vw] page5-elements">
+              <div className="over"></div>
+              <div className="w-[20%] h-full text-xl z-10">UX Audit</div>
+              <div className=" w-[60%] h-full text-xs z-10">
                 Ahead of shaking up the market with a product relaunch or UI/UX
                 redesign, our researchers do UX auditing. It involves an
                 evaluation of the digital interface from UX, marketing, and
                 business standpoints, ultimately providing valuable
                 recommendations for improvement.
               </div>
-              <div className="w-[5%] h-full">a</div>
+              <div className="w-[5%] h-full">
+                {" "}
+                <div className=" rotate-[-45deg] z-10">{">"}</div>
+              </div>
             </div>
-            <div className="w-full h-[20vh] border-b border-[#d3d3d371] flex justify-between py-[1vw]">
-              <div className="w-[20%] h-full text-xl">UX Research</div>
-              <div className=" w-[60%] h-full text-xs">
+            <div className="w-full h-[20vh] border-b border-[#d3d3d371] overflow-hidden flex justify-between relative py-[1vw] page5-elements">
+              <div className="over"></div>
+              <div className="w-[20%] h-full text-xl z-10">UX Audit</div>
+              <div className=" w-[60%] h-full text-xs z-10">
                 Ahead of shaking up the market with a product relaunch or UI/UX
                 redesign, our researchers do UX auditing. It involves an
                 evaluation of the digital interface from UX, marketing, and
                 business standpoints, ultimately providing valuable
                 recommendations for improvement.
               </div>
-              <div className="w-[5%] h-full">a</div>
+              <div className="w-[5%] h-full">
+                {" "}
+                <div className=" rotate-[-45deg] z-10">{">"}</div>
+              </div>
             </div>
           </div>
         </div>
