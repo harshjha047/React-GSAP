@@ -1,13 +1,13 @@
 // Card.jsx
 import React, { useEffect, useRef } from 'react';
 
-function Card({ video, thumbnail, title, description, id }) {
+function Card ({ video, thumbnail, title, description, id }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
     const videoElement = videoRef.current;
 
-    const handleMouseEnter = () => {
+    const  handleMouseEnter = () => {
       videoElement.style.opacity = 1;
       videoElement.play();
     };
@@ -30,15 +30,20 @@ function Card({ video, thumbnail, title, description, id }) {
     <div className="bg-[#111] w-[48%] h-[65vh]">
       <div className="w-[100%] h-[100%] rounded-2xl flex justify-evenly items-center flex-col">
         <div
-          className={`overflow-hidden border w-full h-[70%] relative rounded-2xl bg-[url('${thumbnail}')] bg-cover bg-center bg-no-repeat flex justify-end flex-col`}
+          className={` overflow-hidden border-2 w-full h-[70%] relative rounded-2xl  bg-cover bg-center bg-no-repeat flex justify-end flex-col`}
         >
+          <img 
+          src={thumbnail}
+          className='h-full w-full object-cover bg-cover bg-white bg-center  bg-no-repeat'
+          alt="" 
+          />
           <video
             ref={videoRef}
             id={id}
             className="absolute h-full z-0 w-full opacity-0 object-cover"
             src={`${video}`}
           ></video>
-          <div className="text-white text-xl z-10 p-[1vh]">{title}</div>
+          {/* <div className="text-white text-xl z-10 p-[1vh]">{title}</div> */}
         </div>
         <div className="w-full h-[30%] overflow-hidden text-white text-sm">
           <div className="text-lg font-medium w-full p-[1vh]">About</div>
@@ -46,6 +51,7 @@ function Card({ video, thumbnail, title, description, id }) {
         </div>
       </div>
     </div>
+    
   );
 }
 
