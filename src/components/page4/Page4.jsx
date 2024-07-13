@@ -1,15 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 
-function Page4({
-  id,
-  title,
-  dis,
-  thumbnail,
-  video,
-}) {
-
-  const page4VideoRef=useRef(null)
+function Page4({ id, title, dis, thumbnail, video }) {
+  const page4VideoRef = useRef(null);
 
   useGSAP(() => {});
   useEffect(() => {
@@ -43,16 +36,18 @@ function Page4({
             <div className=" h-5/6 pt-6">{dis}</div>
           </div>
           <div className="h-full w-[70%] relative ">
-            
-              <img src={`${thumbnail}`} alt=""  className={`h-full w-full bg-cover absolute bg-center bg-no-repeat object-cover`}/>
-              <video
-                ref={page4VideoRef}
-                id={id}
-                className="h-full w-full object-cover opacity-0 absolute z-30"
-                muted
-                src={`${video}`}
-              ></video>
-            
+            <img
+              src={`${thumbnail}`}
+              alt=""
+              className={`h-full w-full bg-cover absolute bg-center bg-no-repeat object-cover`}
+            />
+            <video
+              ref={page4VideoRef}
+              id={id}
+              className="h-full w-full object-cover opacity-0 absolute z-30"
+              muted
+              src={`${video}`}
+            ></video>
           </div>
         </div>
       </div>

@@ -13,7 +13,8 @@ import SignUp from "./components/auth/SignUp.jsx";
 import Contect from "./components/Contect.jsx";
 import Card from "./components/Card.jsx";
 import Post from "./components/Post.jsx";
-
+import { Client } from 'appwrite';
+import Test from "./components/auth/test.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,10 +38,18 @@ const router = createBrowserRouter([
       },{
         path:"/post",
         element:<Post/>
+      },{
+        path:"/test",
+        element:<Test/>
       }
     ],
   },
 ]);
+const client = new Client();
+
+client
+    .setEndpoint('https://cloud.appwrite.io/v1')
+    .setProject('669244cd00205111adc6');
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

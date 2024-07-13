@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Client } from 'appwrite';
 import "./App.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -10,6 +11,11 @@ import SignUp from "./components/auth/SignUp";
 import { Outlet } from "react-router-dom";
 
 function App() {
+  const client = new Client();
+
+client
+    .setEndpoint('https://cloud.appwrite.io/v1')
+    .setProject('669244cd00205111adc6');
   useGSAP(() => {
     var tl = gsap.timeline();
     tl.from("#page1", {

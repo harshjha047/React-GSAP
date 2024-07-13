@@ -1,13 +1,13 @@
 // Card.jsx
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
-function Card ({ video, thumbnail, title, description, id }) {
+function Card({ video, thumbnail, title, description, id }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
     const videoElement = videoRef.current;
 
-    const  handleMouseEnter = () => {
+    const handleMouseEnter = () => {
       videoElement.style.opacity = 1;
       videoElement.play();
     };
@@ -17,12 +17,12 @@ function Card ({ video, thumbnail, title, description, id }) {
       videoElement.load();
     };
 
-    videoElement.addEventListener('mouseenter', handleMouseEnter);
-    videoElement.addEventListener('mouseleave', handleMouseLeave);
+    videoElement.addEventListener("mouseenter", handleMouseEnter);
+    videoElement.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      videoElement.removeEventListener('mouseenter', handleMouseEnter);
-      videoElement.removeEventListener('mouseleave', handleMouseLeave);
+      videoElement.removeEventListener("mouseenter", handleMouseEnter);
+      videoElement.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
@@ -32,10 +32,10 @@ function Card ({ video, thumbnail, title, description, id }) {
         <div
           className={` overflow-hidden border-2 w-full h-[70%] relative rounded-2xl  bg-cover bg-center bg-no-repeat flex justify-end flex-col`}
         >
-          <img 
-          src={thumbnail}
-          className='h-full w-full object-cover bg-cover bg-white bg-center  bg-no-repeat'
-          alt="" 
+          <img
+            src={thumbnail}
+            className="h-full w-full object-cover bg-cover bg-white bg-center  bg-no-repeat"
+            alt=""
           />
           <video
             ref={videoRef}
@@ -51,7 +51,6 @@ function Card ({ video, thumbnail, title, description, id }) {
         </div>
       </div>
     </div>
-    
   );
 }
 
