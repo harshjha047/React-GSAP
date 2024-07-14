@@ -4,13 +4,14 @@ import "./App.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Header from "./components/header/Header";
-import Home from "./components/Home";
 import Footer from "./components/Footer";
-import Login from "./components/auth/Login";
-import SignUp from "./components/auth/SignUp";
 import { Outlet } from "react-router-dom";
+// import useGSAPScroll from "./locomotive";
+
 
 function App() {
+
+  // useGSAPScroll();
   const client = new Client();
 
 client
@@ -35,7 +36,7 @@ client
     });
     tl.from("#page1 h1, #page1 p, #page1 div", {
       opacity: 0,
-      duration: 0.5,
+      duration: 0.2,
       stagger: 0.2,
     });
   });
@@ -43,7 +44,7 @@ client
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <Outlet />
       </main>
       <Footer />

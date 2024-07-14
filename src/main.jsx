@@ -2,19 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import {BrowserRouter,createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Login from "./components/auth/Login.jsx";
 import SignUp from "./components/auth/SignUp.jsx";
 import Contect from "./components/Contect.jsx";
-import Card from "./components/Card.jsx";
 import Post from "./components/Post.jsx";
 import { Client } from 'appwrite';
 import Test from "./components/auth/test.jsx";
+import Profile from "./components/profile/Profile.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,6 +37,9 @@ const router = createBrowserRouter([
       },{
         path:"/test",
         element:<Test/>
+      },{
+        path:"/profile",
+        element:<Profile/>
       }
     ],
   },
