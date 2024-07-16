@@ -1,17 +1,42 @@
 import React, { useState } from 'react';
-import { account, ID } from '../lib/appwrite';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
-  const [loggedInUser, setLoggedInUser] = useState(null);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  // const [name, setName] = useState('');
+  const [form, setForm] = useState({});
+  const navigate = useNavigate();
 
-  async function login(email, password) {
-    await account.createEmailPasswordSession(email, password);
-    setLoggedInUser(await account.get());
-  }
+  const handleForm = (e) => {
+      setForm({
+          ...form,
+          [e.target.name]: e.target.value,
+      });
+  };
+
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+          const response = await fetch("http://localhost:3000/login", {
+              method: "POST",
+              body: JSON.stringify(form),
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              credentials: 'include' // Include credentials (cookies)
+          });
+          const data = await response.json();
+          console.log(data);
+
+          if (response.ok && data.redirectTo) {
+              navigate(data.redirectTo); // Redirect to the profile page
+          } else {
+              console.error('Login failed:', data.error);
+          }
+      } catch (error) {
+          console.error('Error logging in:', error);
+      }
+  };
+
+
   return (
     <>
       <div className="h-[120vh] w-full flex pt-[5vh] bg-[#f1f1f1]">
@@ -36,33 +61,34 @@ function Login() {
           <div className=" w-full h-[35vh] flex  items-center font-bold text-[110px] text-black">
             Login
           </div>
-          {loggedInUser ? `Logged in as ${loggedInUser.name}` : `Not logged in`}
+          
           <div className="border-zinc-950 border-t-2 border-l-2 h-[80vh] w-full flex justify-evenly items-center">
             <form
-              // onSubmit={""}
+              onSubmit={handleSubmit}
               className="flex justify-evenly items-center flex-col h-full w-[66%] "
             >
               <div className="flex flex-col justify-evenly items-center bg-transparent w-[70%] h-3/4">
                 <input
                   className="outline-none flex flex-col bg-transparent border-b-2 w-full border-black"
-                  name="Email"
+                  name="email"
                   placeholder="Email"
                   type="email"
-                  value={email} 
-                  onChange={e => setEmail(e.target.value)}
+                  // value={email} 
+                  onChange={handleForm}
                 />
                 <input
                   className="outline-none flex flex-col bg-transparent border-b-2 w-full border-black"
-                  name="Password"
+                  name="password"
                   placeholder="Password"
                   type="password"
-                  value={password} 
-                  onChange={e => setPassword(e.target.value)}
+                  // value={password} 
+                  onChange={handleForm}
                 />
                 <button
-                  type="button"
+                  type="submit"
                   className="w-full rounded-full bg-[#01B7FF] text-white p-3 m-1 font-semibold text-xl "
-                  onClick={async() => await login(email, password)}>
+                  // onClick={}
+                  >
                   Login
                 </button>
               </div>

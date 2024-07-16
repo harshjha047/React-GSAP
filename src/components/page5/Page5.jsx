@@ -52,7 +52,7 @@ function Page5() {
       scrollTrigger: {
         trigger: "#page5",
         scroller: "body",
-        //   markers: true,
+          // markers: true,
         start: " top 100%",
         end: "bottom 100%",
         scrub: 2,
@@ -72,7 +72,7 @@ function Page5() {
           id="scroller"
           className="Page5Left  h-full w-[20%] flex justify-center"
         >
-          <div className="  px-2 sticky mt-[4vh] bg-[#0BA34E] h-[7vh] rounded-3xl flex justify-center items-center font-medium text-sm w-[14vw]">
+          <div className=" absolute  px-2 mt-[4vh] bg-[#0BA34E] h-[7vh] rounded-3xl flex justify-center items-center font-medium text-sm w-[14vw]">
             Become a Client
           </div>
         </div>
@@ -80,14 +80,14 @@ function Page5() {
         <div className="Page5Right  h-full w-[70%]">
           <div className="page5Right-section1 text-3xl pt-[4vh] pb-[1vw] border-b border-[#d3d3d371]">
             <span className=" w-full flex justify-end  ">
-              {" "}
+              
               We lead your startup at every step of its
             </span>
             <span className=" w-full flex justify-end  ">
               Lorem ipsum dolor sit amet consectetur
             </span>
             <span className=" w-full flex justify-end  ">
-              {" "}
+              
               adipisicing elit. Nulla obcaecati, enim asperiores nisi molestias
               aliquam saepe doloremque dolores distinctio eos ullam esse,
               accusamus cum inventore quo quos officia rem possimus ab at minus?
@@ -128,7 +128,7 @@ function Page5() {
                 recommendations for improvement.
               </div>
               <div className="w-[5%] h-full">
-                {" "}
+                
                 <div className=" rotate-[-45deg] z-10">{">"}</div>
               </div>
             </div>
@@ -143,7 +143,7 @@ function Page5() {
                 recommendations for improvement.
               </div>
               <div className="w-[5%] h-full">
-                {" "}
+                
                 <div className=" rotate-[-45deg] z-10">{">"}</div>
               </div>
             </div>
@@ -158,7 +158,7 @@ function Page5() {
                 recommendations for improvement.
               </div>
               <div className="w-[5%] h-full">
-                {" "}
+                
                 <div className=" rotate-[-45deg] z-10">{">"}</div>
               </div>
             </div>
@@ -173,7 +173,7 @@ function Page5() {
                 recommendations for improvement.
               </div>
               <div className="w-[5%] h-full">
-                {" "}
+                
                 <div className=" rotate-[-45deg] z-10">{">"}</div>
               </div>
             </div>
@@ -212,7 +212,7 @@ function Page5() {
                 recommendations for improvement.
               </div>
               <div className="w-[5%] h-full">
-                {" "}
+                
                 <div className=" rotate-[-45deg] z-10">{">"}</div>
               </div>
             </div>
@@ -227,7 +227,7 @@ function Page5() {
                 recommendations for improvement.
               </div>
               <div className="w-[5%] h-full">
-                {" "}
+                
                 <div className=" rotate-[-45deg] z-10">{">"}</div>
               </div>
             </div>
@@ -242,7 +242,7 @@ function Page5() {
                 recommendations for improvement.
               </div>
               <div className="w-[5%] h-full">
-                {" "}
+                
                 <div className=" rotate-[-45deg] z-10">{">"}</div>
               </div>
             </div>
@@ -257,7 +257,7 @@ function Page5() {
                 recommendations for improvement.
               </div>
               <div className="w-[5%] h-full">
-                {" "}
+                
                 <div className=" rotate-[-45deg] z-10">{">"}</div>
               </div>
             </div>

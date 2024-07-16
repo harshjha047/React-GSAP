@@ -1,22 +1,18 @@
-import { useState } from "react";
-import { Client } from 'appwrite';
+import React, { useEffect, useRef } from 'react';
+import LocomotiveScroll from 'locomotive-scroll';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import 'locomotive-scroll/src/locomotive-scroll.scss';
 import "./App.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Header from "./components/header/Header";
 import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
-// import useGSAPScroll from "./locomotive";
-
 
 function App() {
+  const scrollRef = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
 
-  // useGSAPScroll();
-  const client = new Client();
-
-client
-    .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('669244cd00205111adc6');
   useGSAP(() => {
     var tl = gsap.timeline();
     tl.from("#page1", {
@@ -25,9 +21,9 @@ client
       delay: 0.2,
     });
     tl.from("#page1", {
-      transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
-      borderRadius: "250px",
-      duration: 2,
+      transform: "scaleX(0.7) scaleY(0.1) translateY(70%)",
+      borderRadius: "500px",
+      duration: 1,
       ease: "expo.out",
     });
     tl.from("header", {
@@ -36,18 +32,47 @@ client
     });
     tl.from("#page1 h1, #page1 p, #page1 div", {
       opacity: 0,
-      duration: 0.2,
+      duration: 0.1,
       stagger: 0.2,
     });
   });
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+    });
+
+    scroll.on('scroll', ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy(scrollRef.current, {
+      scrollTop(value) {
+        return arguments.length ? scroll.scrollTo(value, 0, 0) : scroll.scrollTo.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+      },
+      pinType: scrollRef.current.style.transform ? 'transform' : 'fixed',
+    });
+
+    ScrollTrigger.addEventListener('refresh', () => scroll.update());
+    ScrollTrigger.refresh();
+
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
 
   return (
     <>
-      <Header />
-      <main id="main">
-        <Outlet />
-      </main>
-      <Footer />
+          <Header />
+          <div className="" data-scroll-container ref={scrollRef}>
+          <section data-scroll-section>
+          <main id="main">
+            <Outlet />
+          </main>
+          <Footer />
+        </section>
+      </div>
     </>
   );
 }

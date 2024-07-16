@@ -1,54 +1,31 @@
-import React, { useState } from 'react';
-import { account, ID } from '../lib/appwrite';
+import React, { useEffect, useRef } from 'react';
+import LocomotiveScroll from 'locomotive-scroll';
+import Home from '../Home'
+import 'locomotive-scroll/src/locomotive-scroll.scss'; // Import Locomotive Scroll styles
 
-const Test = () => {
-  const [loggedInUser, setLoggedInUser] = useState(null);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
+const SmoothScrollComponent = () => {
+  const scrollRef = useRef(null);
 
-  async function login(email, password) {
-    await account.createEmailPasswordSession(email, password);
-    setLoggedInUser(await account.get());
-  }
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+    });
+
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
 
   return (
-    <div className=' h-[100vh] pt-96'>
-      <p>
-        {loggedInUser ? `Logged in as ${loggedInUser.name}` : 'Not logged in'}
-      </p>
-
-      <form>
-        <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-        <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-        <input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
-
-        <button type="button" onClick={() => login(email, password)}>
-          Login
-        </button>
-
-        <button
-          type="button"
-          onClick={async () => {
-            await account.create(ID.unique(), email, password, name);
-            login(email, password);
-          }}
-        >
-          Register
-        </button>
-
-        <button
-          type="button"
-          onClick={async () => {
-            await account.deleteSession('current');
-            setLoggedInUser(null);
-          }}
-        >
-          Logout
-        </button>
-      </form>
+    <div className='' data-scroll-container ref={scrollRef}>
+      <section data-scroll-section>
+        {/* <h1 data-scroll data-scroll-speed="2">Smooth Scroll with Locomotive Scroll</h1> */}
+        {/* <p data-scroll data-scroll-speed="3">This is an example of smooth scroll using Locomotive Scroll in a React application.</p> */}
+        <Home/>
+      </section>
     </div>
   );
 };
 
-export default Test;
+export default SmoothScrollComponent;

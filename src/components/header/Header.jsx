@@ -1,10 +1,19 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import MenuElem from "./MenuElem";
+// import { a } from "react-router-dom";
 
 function Header() {
+  const menuElems = [
+    { id: 1, title: "Home", link: "/" },
+    { id: 2, title: "About", link: "/about" },
+    { id: 3, title: "Services", link: "/services" },
+    { id: 4, title: "Contact", link: "/contact" },
+  ]
   const navRef = useRef();
+  const menuRef = useRef();
+
   useGSAP(
     () => {
       // Mouse enter event
@@ -23,6 +32,14 @@ function Header() {
           stagger: 0.05,
           opacity: 1,
         });
+      });
+
+      // Click event for menu
+      menuRef.current.addEventListener("click", () => {
+        let tl = gsap.timeline();
+        tl.to('#menu', {
+          height:"50vh"
+        })
       });
 
       // Mouse leave event to reset height
@@ -51,77 +68,75 @@ function Header() {
   return (
     <>
       <header className="w-full h-[12vh] z-50 flex justify-evenly fixed bg-[#111]">
+        <div id="menu" className=" h-[0px] absolute overflow-hidden w-[80%] z-50 bg-[#111] ">
+            {menuElems.map((elem)=>(
+              <MenuElem 
+              key={elem.id}
+              titel={elem.title} 
+              link={elem.link} 
+              id={elem.id}/>
+              ))}
+        </div>
         <nav
           ref={navRef}
           className="w-4/5 h-[9.5vh] mt-4 bg-[#111]  overflow-hidden border-b-[1px] border-[#ffffffad] "
         >
           <div className="w-full h-[9.5vh]  flex justify-between  text-white items-center  ">
             <div className="h-full w-[15%] flex  items-center font-bold text-xl ">
-              <Link to={"/"}>{"</DIV>"}</Link>
+              <a  href={"/"}>{"</DIV>"}</a>
+              {/* <a href=""></a> */}
             </div>
             <ul className="flex justify-evenly h-full w-3/5 font-semibold text-sm uppercase  pt-[3vh] ">
               <div className="nav-elam font-semibold text-sm">
-                <Link to={"/"} className="block">
+                <a href={"/"} className="block">
                   home
-                </Link>
+                </a>
                 <h5 className=" hidden translate-y-7 overflow-hidden">
-                  <Link to={"/"} className="overflow-hidden">
+                  <a href={"/"} className="overflow-hidden">
                     <p className="p text-xs">home</p>
-                  </Link>
+                  </a>
                 </h5>
               </div>
 
               <div className="nav-elam font-semibold text-sm">
-                <Link to={"/login"} className="">
+                <a href={"/login"} className="">
                   login
-                </Link>
+                </a>
                 <h5 className=" hidden translate-y-7 overflow-hidden">
-                  <Link to="/login" className="overflow-hidden flex flex-col">
+                  <a href="/login" className="overflow-hidden flex flex-col">
                     {" "}
                     <p className="p text-xs">login</p>
-                  </Link>
-                  <Link
-                    to={"/signup"}
-                    className="overflow-hidden flex flex-col"
-                  >
-                    {" "}
-                    <p className="p text-xs">sign up</p>
-                  </Link>
+                  </a>
+                  <a href={"/signup"} className="overflow-hidden flex flex-col"><p className="p text-xs">sign up</p></a>
+                  <a href={"/profile"} className="overflow-hidden flex flex-col"><p className="p text-xs">profile</p></a>
                 </h5>
               </div>
               <div className="nav-elam font-semibold text-sm">
-                <Link to={"/about"} className="">
+                <a href={"/about"} className="">
                   About Us
-                </Link>
+                </a>
                 <h5 className=" hidden translate-y-7 overflow-hidden">
-                  <Link to={"/about"} className="overflow-hidden">
+                  <a href={"/about"} className="overflow-hidden">
                     <p className="p text-xs">About Us</p>
-                  </Link>
+                  </a>
+                  <a href={"/post"} className="overflow-hidden flex flex-col"><p className="p text-xs">post</p></a>
                 </h5>
               </div>
               <div className="nav-elam font-semibold text-sm">
-                <Link to={"/help"} className="">
-                  help
-                </Link>
+                <a href={"/help"} className="">
+                CONTECT US
+                </a>
                 <h5 className=" hidden translate-y-7 overflow-hidden">
-                  <Link to={"/help"} className="overflow-hidden">
+                  <a href={"/help"} className="overflow-hidden">
                     <p className="p text-xs">help</p>{" "}
-                  </Link>
+                  </a>
                 </h5>
               </div>
             </ul>
             <div className="h-full w-[15%] flex justify-end items-center ">
-              <Link
-                to={"/contect"}
-                className="py-2 px-3 font-semibold bg-[#4D9D5B] h-[5vh] w-[20vh] text-xs rounded-full flex justify-evenly items-center"
-              >
-                CONTECT US
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/76/Antu_application-vnd.oasis.opendocument.text-template.svg"
-                  alt=""
-                  className="h-full w-1/6"
-                />
-              </Link>
+              <p ref={menuRef} className="py-2 z-40 px-3 font-semibold bg-[#4D9D5B] h-[7vh] w-[7vh] text-xs rounded-full flex justify-evenly items-center">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Antu_application-vnd.oasis.opendocument.text-template.svg" alt="" className="h-[4vh] w-[4vh] text-lg transition-all duration-500 hover:rotate-45"/>
+              </p>
             </div>
           </div>
           <div className=" w-full  mt-[-1px] navbot"></div>

@@ -9,7 +9,7 @@ function Footer() {
     const area = document.querySelector(`.area`);
 
     const handleMouseEnter = (dets) => {
-      console.log(dets);
+      // console.log(dets);
       gsap.to(`.homo`, {
         duration: 0.4,
         opacity: 1,
@@ -38,7 +38,7 @@ function Footer() {
     };
 
     const handleMouseLeave = (dets) => {
-      console.log(dets);
+      // console.log(dets);
       gsap.to(`.homo`, {
         duration: 0.4,
         opacity: 0,

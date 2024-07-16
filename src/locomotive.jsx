@@ -1,46 +1,30 @@
-import { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import LocomotiveScroll from 'locomotive-scroll';
+// import React, { useEffect, useRef } from 'react';
+// import LocomotiveScroll from 'locomotive-scroll';
+// import 'locomotive-scroll/src/locomotive-scroll.scss'; // Import Locomotive Scroll styles
 
-gsap.registerPlugin(ScrollTrigger);
+// const SmoothScrollComponent = () => {
+//   const scrollRef = useRef(null);
 
-const useGSAPScroll = () => {
-  useEffect(() => {
-    const locoScroll = new LocomotiveScroll({
-      el: document.querySelector('#root'),
-      smooth: true,
-      tablet: { smooth: true },
-      smartphone: { smooth: true },
-    });
+//   useEffect(() => {
+//     const scroll = new LocomotiveScroll({
+//       el: scrollRef.current,
+//       smooth: true,
+//     });
 
-    locoScroll.on('scroll', ScrollTrigger.update);
+//     return () => {
+//       if (scroll) scroll.destroy();
+//     };
+//   }, []);
 
-    ScrollTrigger.scrollerProxy('#root', {
-      scrollTop(value) {
-        return arguments.length
-          ? locoScroll.scrollTo(value, 0, 0)
-          : locoScroll.scrollTo.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-    });
+//   return (
+//     <div data-scroll-container ref={scrollRef}>
+//       <section data-scroll-section>
+//         <h1 data-scroll data-scroll-speed="2">Smooth Scroll with Locomotive Scroll</h1>
+//         <p data-scroll data-scroll-speed="3">This is an example of smooth scroll using Locomotive Scroll in a React application.</p>
+//         {/* Add more content here */}
+//       </section>
+//     </div>
+//   );
+// };
 
-    ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
-
-    ScrollTrigger.refresh();
-
-    return () => {
-      locoScroll.destroy();
-      ScrollTrigger.removeEventListener('refresh', () => locoScroll.update());
-    };
-  }, []);
-};
-
-export default useGSAPScroll;
+// export default SmoothScrollComponent;
