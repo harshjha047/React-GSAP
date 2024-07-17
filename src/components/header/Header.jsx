@@ -7,8 +7,8 @@ import MenuElem from "./MenuElem";
 function Header() {
   const menuElems = [
     { id: 1, title: "Home", link: "/" },
-    { id: 2, title: "About", link: "/about" },
-    { id: 3, title: "Services", link: "/services" },
+    { id: 2, title: "Login", link: "/login" },
+    { id: 3, title: "Profile", link: "/profile" },
     { id: 4, title: "Contact", link: "/contact" },
   ]
   const navRef = useRef();

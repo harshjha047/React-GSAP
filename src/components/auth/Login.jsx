@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
@@ -6,36 +6,35 @@ function Login() {
   const navigate = useNavigate();
 
   const handleForm = (e) => {
-      setForm({
-          ...form,
-          [e.target.name]: e.target.value,
-      });
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = async (e) => {
-      e.preventDefault();
-      try {
-          const response = await fetch("http://localhost:3000/login", {
-              method: "POST",
-              body: JSON.stringify(form),
-              headers: {
-                  "Content-Type": "application/json",
-              },
-              credentials: 'include' // Include credentials (cookies)
-          });
-          const data = await response.json();
-          console.log(data);
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include", // Include credentials (cookies)
+      });
+      const data = await response.json();
+      console.log(data);
 
-          if (response.ok && data.redirectTo) {
-              navigate(data.redirectTo); // Redirect to the profile page
-          } else {
-              console.error('Login failed:', data.error);
-          }
-      } catch (error) {
-          console.error('Error logging in:', error);
+      if (response.ok && data.redirectTo) {
+        navigate(data.redirectTo); // Redirect to the profile page
+      } else {
+        console.error("Login failed:", data.error);
       }
+    } catch (error) {
+      console.error("Error logging in:", error);
+    }
   };
-
 
   return (
     <>
@@ -61,7 +60,7 @@ function Login() {
           <div className=" w-full h-[35vh] flex  items-center font-bold text-[110px] text-black">
             Login
           </div>
-          
+
           <div className="border-zinc-950 border-t-2 border-l-2 h-[80vh] w-full flex justify-evenly items-center">
             <form
               onSubmit={handleSubmit}
@@ -73,7 +72,7 @@ function Login() {
                   name="email"
                   placeholder="Email"
                   type="email"
-                  // value={email} 
+                  // value={email}
                   onChange={handleForm}
                 />
                 <input
@@ -81,14 +80,14 @@ function Login() {
                   name="password"
                   placeholder="Password"
                   type="password"
-                  // value={password} 
+                  // value={password}
                   onChange={handleForm}
                 />
                 <button
                   type="submit"
                   className="w-full rounded-full bg-[#01B7FF] text-white p-3 m-1 font-semibold text-xl "
                   // onClick={}
-                  >
+                >
                   Login
                 </button>
               </div>

@@ -24,7 +24,7 @@ function Page4({ id, title, dis, thumbnail, video }) {
       over.removeEventListener("mouseleave", notOverVid);
     };
   }, []);
-  console.log(id);
+  
   return (
     <div className="bg-[#fff] text-black">
       <div className="h-[75vh] w-full flex justify-center  items-center ">

@@ -11,6 +11,8 @@ import Post from "./components/Post.jsx";
 import { Client } from 'appwrite';
 import Test from "./components/auth/test.jsx";
 import Profile from "./components/profile/Profile.jsx";
+import EditProfile from "./components/profile/EditProfile.jsx";
+import CreatePost from "./components/posts/CreatePost.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +42,12 @@ const router = createBrowserRouter([
       },{
         path:"/profile",
         element:<Profile/>
+      },{
+        path:"/profile/edit",
+        element:<EditProfile/>
+      },{
+        path:"/post/create",
+        element:<CreatePost/>
       }
     ],
   },

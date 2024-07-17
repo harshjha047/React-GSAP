@@ -43,7 +43,7 @@ function Elem2({ id, titel, image }) {
       element.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
-  console.log(id);
+  
 
   return (
     <>

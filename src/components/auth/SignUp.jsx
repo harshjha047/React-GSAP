@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import {account,ID} from '../lib/appwrite'
 
 function SignUp() {
   const [form, setForm] = useState({});
@@ -34,6 +33,7 @@ function SignUp() {
       console.error('Error submitting form:', error);
     }
   };
+  
 
 
   return (
