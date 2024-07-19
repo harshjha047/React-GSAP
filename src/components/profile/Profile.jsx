@@ -57,7 +57,7 @@ const Profile = () => {
                       {`${user.name}`}
                     </div>
                     <div className="w-full h-[50%] ">
-                    I am looking for a frontend developer internship or job i want to grow in my field of software engineering and toward full stack developer by this internship or job i will start my carrier as a frontend developer and move for full stack development and more about software engineering 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sapiente. Quia a exercitationem porro, libero sapiente incidunt harum quisquam provident saepe labore error velit id esse rem architecto ipsum voluptas? 
                     </div>
                     <div className="w-full h-[20%] flex items-center ">
                       <a href="/profile/edit">
@@ -71,7 +71,7 @@ const Profile = () => {
                     </div>
                   </div>
                   <div className="w-full h-[30%] border text-8xl flex flex-col items-center p-[1vh] text-[#2b2b2b] font-semibold">
-                    user
+                    admin
                   </div>
                 </div>
               </div>

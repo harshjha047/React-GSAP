@@ -8,11 +8,11 @@ import Login from "./components/auth/Login.jsx";
 import SignUp from "./components/auth/SignUp.jsx";
 import Contect from "./components/Contect.jsx";
 import Post from "./components/Post.jsx";
-import { Client } from 'appwrite';
 import Test from "./components/auth/test.jsx";
 import Profile from "./components/profile/Profile.jsx";
 import EditProfile from "./components/profile/EditProfile.jsx";
 import CreatePost from "./components/posts/CreatePost.jsx";
+import About from "./components/about/About.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,15 +48,14 @@ const router = createBrowserRouter([
       },{
         path:"/post/create",
         element:<CreatePost/>
+      },{
+        path:"/about",
+        element:<About/>
       }
     ],
   },
 ]);
-const client = new Client();
 
-client
-    .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('669244cd00205111adc6');
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
