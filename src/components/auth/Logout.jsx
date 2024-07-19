@@ -39,7 +39,7 @@ function Logout() {
   return (
     <div>
         <form onSubmit={handleSubmit}>
-            <button className="bg-white px-[2vh] py-[0.4vh] text-black font-semibold " type="submit" onClick={handleForm}>Logout</button>
+            <button className="" type="submit" onClick={handleForm}>Logout</button>
         </form>
     </div>
   )

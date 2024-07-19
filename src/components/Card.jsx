@@ -46,8 +46,11 @@ function Card({ video, thumbnail, title, description, id }) {
           {/* <div className="text-white text-xl z-10 p-[1vh]">{title}</div> */}
         </div>
         <div className="w-full h-[30%] overflow-hidden text-white text-sm">
-          <div className="text-lg font-medium w-full p-[1vh]">About</div>
-          <div className="px-[0.5vh]">{description}</div>
+          <div className="text-lg font-medium w-full p-[1vh]">Author</div>
+          <div className="px-[0.5vh] flex justify-between">
+            <div className=" font-medium text-blue-500">Likes</div>
+            <div className=" font-medium text-gray-500">Edit</div>
+          </div>
         </div>
       </div>
     </div>

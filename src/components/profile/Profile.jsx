@@ -48,17 +48,16 @@ const Profile = () => {
               <div className="h-[100%] flex justify-evenly flex-col w-[50%] ">
                 <div className=" h-[75vh] flex justify-between flex-col w-[100%]">
                   <div className="w-full h-[%]  flex items-start ">
+                    <div className="bg-white px-[2vh] py-[0.4vh] text-black font-semibold">
                     <Logout />
-                    {/* <div className=" uppercase px-[2vh] py-[0.4vh] bg-[#FFF] font-medium text-black ">
-                    developer
-                  </div> */}
+                    </div>
                   </div>
                   <div className="w-full h-[55%] flex justify-evenly items-center flex-col ">
                     <div className="w-full h-[30%] text-6xl font-me]dium ">
                       {`${user.name}`}
                     </div>
                     <div className="w-full h-[50%] ">
-                    {`${user.discription}`}
+                    I am looking for a frontend developer internship or job i want to grow in my field of software engineering and toward full stack developer by this internship or job i will start my carrier as a frontend developer and move for full stack development and more about software engineering 
                     </div>
                     <div className="w-full h-[20%] flex items-center ">
                       <a href="/profile/edit">
@@ -72,7 +71,7 @@ const Profile = () => {
                     </div>
                   </div>
                   <div className="w-full h-[30%] border text-8xl flex flex-col items-center p-[1vh] text-[#2b2b2b] font-semibold">
-                    none
+                    user
                   </div>
                 </div>
               </div>

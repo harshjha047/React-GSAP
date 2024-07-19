@@ -8,32 +8,11 @@
 ::selection {
   background-color: #00000000;
 }
-/* #main{
-  height: 800vh;
-  overflow: hidden; 
-}
-.scroll-container {
-  position: relative;
-  overflow: hidden;
-}
-html{
-  height: 100%;
-  overflow: hidden; /* Prevent default scrolling 
-} */
 
-[data-scroll-container] {
-  /* height: 100vh; */
-  /* overflow: hidden; */
-}
-
-[data-scroll-section] {
-  /* min-height: 100vh; */
-}
 
 
 #root {
   height: 100%;
-  /* overflow: hidden; Prevent default scrolling */
 }
 .bji {
   background: rgba(255, 255, 255, 0);
@@ -111,4 +90,24 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .page5-elements:hover {
   border-top: 2px solid #fff;
+}
+#slide{
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.8s;
+}
+.menuElem:hover #slide{
+  transform: translateX(0);
+  display: initial;
+  opacity: 1;
+  
+}
+.menuElem:hover .elemTitel{
+  color: #000000;
 }
