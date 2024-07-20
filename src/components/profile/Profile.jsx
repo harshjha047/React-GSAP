@@ -29,6 +29,10 @@ const Profile = () => {
 
   return (
     <div className=" pt-[12vh] flex items-center flex-col bg-[#111] text-white">
+            {/* <div
+            id="aboutCover"
+            className=" absolute bg-white h-[2px] w-[0px] bottom-0  mix-blend-difference"
+          ></div> */}
       <div className="w-[80%]">
         <div className="w-[80vw] h-full line z-20 overflow-hidden">
           <div className="h-[85vh] w-[100%] flex relative items-center  border-b-2">

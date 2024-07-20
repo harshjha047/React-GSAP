@@ -1,3 +1,4 @@
+// complete
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
@@ -91,7 +92,7 @@ function Header() {
               <div className="  transition-all duration-300 bg-[#111] w-full h-[10vh] border uppercase text-white text-4xl font-semibold px-[3vh] py-[1vh] ">
                 <div className=" flex justify-between items-center">
                   <div className="elemTitel z-50">Cancel</div>
-                  <div className="elemTitel z-50">X</div>
+                  <div className="elemTitel z-50 ">X</div>
                 </div>
               </div>
             </div>
@@ -116,7 +117,7 @@ function Header() {
               {/* <a href=""></a> */}
             </div>
             <ul className="flex justify-evenly h-full w-3/5 font-semibold text-sm uppercase  pt-[3vh] ">
-              <div className="nav-elam font-semibold text-sm">
+              <div className="  nav-elam font-semibold text-sm">
                 <a href={"/"} className="block">
                   home
                 </a>
@@ -126,7 +127,7 @@ function Header() {
                   </a>
                 </h5>
               </div>
-              <div className="nav-elam font-semibold text-sm">
+              <div className="  nav-elam font-semibold text-sm">
                 <a href={"/profile"} className="">
                   profile
                 </a>
@@ -148,7 +149,7 @@ function Header() {
                   </a>
                 </h5>
               </div>
-              <div className="nav-elam font-semibold text-sm">
+              <div className="  nav-elam font-semibold text-sm">
                 <a href={"/login"} className="">
                   login
                 </a>
@@ -164,7 +165,7 @@ function Header() {
                   </a>
                 </h5>
               </div>
-              <div className="nav-elam font-semibold text-sm">
+              <div className="  nav-elam font-semibold text-sm">
                 <a href={"/about"} className="">
                   help
                 </a>

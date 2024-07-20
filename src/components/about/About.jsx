@@ -1,28 +1,46 @@
+// complete
 import React from "react";
 
 function About() {
   return (
     <div>
-      <div className="w-full flex flex-col bg-[#111] items-center text-white">
+      <div
+        id="page1"
+        className="w-full flex flex-col bg-[#111] items-center text-white"
+      >
         <div className="h-[15vh]"></div>
         <div className="w-[80%]  ">
           <div className=" flex justify-between">
-            <div className="h-[30vh]  text-[158px]  flex font-[BebasNeue] justify-center items-center">
-              ABOUT US.
+            <div className=" h-[20vh] my-[2vw] text-[158px] relative  flex font-[BebasNeue] justify-center items-center ">
+              <div
+                id="aboutCover"
+                className=" absolute bg-white h-[2px] w-[0px] bottom-0 "
+                // mix-blend-difference
+              ></div>
+              <h2 id="aboutus" className="font-[BebasNeue]">ABOUT US.</h2>
             </div>
             {/* <div className="h-[30vh]  text-9xl font-semibold flex justify-center items-center">{`</DIV>`}</div> */}
           </div>
           <div className="">
-            <p>Hay.</p>
             <p>
-              I am Harsh Jha i create this website in every aspects like design
-              and Development Frontend and Backend everything i use basics of
-              HTML, CSS, JAVASCRIPT, to use React and for styling i use Tailwind
-              in react i use multiple outsourced libraries like React Router
-              Dom, GSAP, Locomotive, Scroll Trigger, Axios, and for Backend i
-              used Node with multiple elements like Express, MongoDB, ejs,
-              Cookie Parser, Bcrypt, Jsonwebtoken, Crypto, Cors, Body Parser,
-              Mongoose, Multer
+              Hay. <br />
+              I am Harsh Jha, and I developed this website from the ground up,
+              handling both design and development for the frontend and backend.
+              For the frontend, I utilized HTML, CSS, and JavaScript as the
+              basics and built the application using React. I styled the
+              application with Tailwind CSS and incorporated several external
+              libraries, including React Router Dom for navigation, GSAP and
+              Locomotive for animations, Scroll Trigger for scroll-based
+              effects, and Axios for handling HTTP requests.
+              <br />
+              On the backend, I employed Node.js along with various essential
+              components such as Express for the server framework, MongoDB for
+              the database, and ejs for templating. I ensured secure handling of
+              data using Cookie Parser, Bcrypt for password hashing,
+              Jsonwebtoken for authentication, and Crypto for encryption.
+              Additionally, I used Cors to manage cross-origin requests, Body
+              Parser for parsing request bodies, Mongoose for object data
+              modeling with MongoDB, and Multer for handling file uploads.
             </p>
             <div className="flex justify-between mt-[2vw]">
               <div className=" w-[50vw]  p-[1vw]">

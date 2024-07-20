@@ -37,6 +37,10 @@ function Post() {
 
   return (
     <div className="bg-[#111] flex justify-center items-center">
+            {/* <div
+            id="aboutCover"
+            className=" absolute bg-white h-[2px] w-[0px] bottom-0  mix-blend-difference"
+          ></div> */}
       <div className="">
         <div className="h-[16vh] w-full"></div>
         <div className="flex flex-wrap w-[80vw] justify-between">

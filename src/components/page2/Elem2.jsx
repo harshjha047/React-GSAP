@@ -48,6 +48,7 @@ function Elem2({ id, titel, image }) {
   return (
     <>
       <div id={id} className={`w-full bji h-[20vh] pt-[2vh] relative `}>
+        
         <div
           className={`${id} absolute  flex justify-evenly items-center opacity-0 scale-0 h-[7vw] w-[7vw] bg-green-500 bg-[url('https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp')] bg-[url('${image}')] bg-cover bg-center bg-no-repeat rounded-full`}
         ></div>

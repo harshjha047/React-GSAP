@@ -51,7 +51,7 @@ function Page5() {
     let tlTrigger = gsap.timeline({
       scrollTrigger: {
         trigger: "#page5",
-        scroller: "body",
+        // scroller: scrollRef.current,
           // markers: true,
         start: " top 100%",
         end: "bottom 100%",
