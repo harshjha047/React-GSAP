@@ -6,25 +6,25 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
-  const [user, setUser] = useState(null);
-  const navigate = useNavigate();
+  // const [user, setUser] = useState(null);
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const response = await axios.post("http://localhost:3000/profile", {}, { withCredentials: true });
-        setUser(response.data);
-      } catch (error) {
-        navigate("/login");
-      }
-    };
+  // useEffect(() => {
+  //   const fetchProfile = async () => {
+  //     try {
+  //       const response = await axios.post("http://localhost:3000/profile", {}, { withCredentials: true });
+  //       setUser(response.data);
+  //     } catch (error) {
+  //       navigate("/login");
+  //     }
+  //   };
 
-    fetchProfile();
-  }, [navigate]);
+  //   fetchProfile();
+  // }, [navigate]);
 
-  console.log(user)
+  // console.log(user)
 
-  if (!user) return <div className="h-[100vh] flex justify-center items-center w-fill bg-[#111] text-white text-9xl">Loading...</div>;
+  // if (!user) return <div className="h-[100vh] flex justify-center items-center w-fill bg-[#111] text-white text-9xl">Loading...</div>;
 
 
   return (
@@ -58,7 +58,7 @@ const Profile = () => {
                   </div>
                   <div className="w-full h-[55%] flex justify-evenly items-center flex-col ">
                     <div className="w-full h-[30%] text-6xl font-me]dium ">
-                      {`${user.name}`}
+                      {/* {`${user.name}`} */} Harsh Jha
                     </div>
                     <div className="w-full h-[50%] ">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sapiente. Quia a exercitationem porro, libero sapiente incidunt harum quisquam provident saepe labore error velit id esse rem architecto ipsum voluptas? 
